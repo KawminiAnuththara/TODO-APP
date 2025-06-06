@@ -7,6 +7,8 @@ import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo';
 import { tokenCache } from '@clerk/clerk-expo/token-cache';
 import HomeScreen from './Screens/HomeScreen/HomeScreen';
 import LoginScreen from './Screens/LoginScreen/LoginScreen';
+import Colors from '@/components/Utills/Colors';
+import MainNavigator from '@/components/Navigations/MainNavigation';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -43,7 +45,7 @@ export default function Index() {
       <View onLayout={onLayoutRootView} style={styles.container}>
         <SignedIn>
           
-            <HomeScreen/>
+            <MainNavigator/>
           
         </SignedIn>
         <SignedOut>
@@ -64,5 +66,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: 25,
+    backgroundColor:Colors.CLAM
   },
 });
