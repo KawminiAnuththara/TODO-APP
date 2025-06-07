@@ -9,7 +9,7 @@ import HomeScreen from './Screens/HomeScreen/HomeScreen';
 import LoginScreen from './Screens/LoginScreen/LoginScreen';
 import Colors from '@/components/Utills/Colors';
 import MainNavigator from '@/components/Navigations/MainNavigation';
-
+import Toast from 'react-native-toast-message';
 SplashScreen.preventAutoHideAsync();
 
 export default function Index() {
@@ -51,6 +51,7 @@ export default function Index() {
         <SignedOut>
           <LoginScreen />
         </SignedOut>
+        <Toast/>
 
         <StatusBar style="auto" />
       </View>
@@ -66,6 +67,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: 25,
-    backgroundColor:Colors.CLAM
+    
   },
 });

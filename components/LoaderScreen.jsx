@@ -15,16 +15,16 @@ export default function LoaderScreen() {
     }, 3000); // Adjust the time as needed
   }, []);
   return (
-    <View style={StyleSheet.animationContainer}>
+    <View style={styles.animationContainer}>
       <ImageBackground 
         style={styles.bgImage}
-        source={require('../assets/images/backImage.png')}
+        source={require('../assets/images/bgImage.png')}
         blurRadius={5} // Apply blur effect
       >
         <View style={styles.centerContainer}>
           <Image
             style={styles.logo}
-            source={require('../assets/images/logo.png')}
+            source={require('../assets/images/logo-white.png')}
           />
           <LottieView
             autoPlay

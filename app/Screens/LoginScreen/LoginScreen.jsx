@@ -5,12 +5,13 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Colors from '../../../components/Utills/Colors';
 import { useWarmUpBrowser } from '../../../hooks/WarmUpBrowser';
+import { router } from 'expo-router';
 
 WebBrowser.maybeCompleteAuthSession(); 
 
 export default function LoginScreen() {
   useWarmUpBrowser();
-  const { startOAuthFlow } = useOAuth({ strategy: 'oauth_google' });
+  const { startOAuthFlow } = useOAuth({ strategy: 'oauth_google' , });
   const navigation = useNavigation();
 
   const onPress = async () => {
@@ -20,9 +21,10 @@ export default function LoginScreen() {
       if (createdSessionId) {
         setActive({ session: createdSessionId });
         navigation.reset({
-          index:0,
-          routes:[{name:'HomeScreen'}],
+           index: 0,
+           routes: [{ name: 'HomeScreen/HomeScreen' }],
         });
+
         
       } else {
         console.log('No session created');
@@ -35,20 +37,19 @@ export default function LoginScreen() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('../../../assets/images/logo.png')}
+        source={require('../../../assets/images/logo-black.png')}
         style={styles.logoImage}
       />
       <Image
-        source={require('../../../assets/images/image2.png')}
+        source={require('../../../assets/images/image3.png')}
         style={styles.bgImage}
       />
       <View style={styles.textContainer}>
         <Text style={styles.heading}>
-          Find the Nearest Veterinary Clinic for Your Beloved Pet
+          Less stress. More success
         </Text>
         <Text style={styles.desc}>
-          Ensure your furry friends receive the best care by finding trusted
-          vets in your area in just a few taps.
+          GetItDone helps you own your day and feel amazing doing it!
         </Text>
       </View>
       <TouchableOpacity style={styles.button} onPress={onPress}>
@@ -68,10 +69,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logoImage: {
-    width: 200,
-    height: 100,
+    width: 500,
+    height: 250,
     resizeMode: 'contain',
-    marginBottom: 15,
+    marginBottom: -60,
+    marginTop:-100
   },
   textContainer: {
     alignItems: 'center',
@@ -103,7 +105,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   buttonText: {
-    color: Colors.WHITE,
+    color: Colors.BLACK,
     textAlign: 'center',
     fontFamily: 'Outfit',
     fontSize: 17,
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
   },
   bgImage: {
     width: '100%',
-    height: 200,
+    height: 300,
     marginTop: 10,
     resizeMode: 'cover',
   },

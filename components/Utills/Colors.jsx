@@ -1,8 +1,8 @@
 export default{
-    PRIMARY:'#034C53',
-    SECONDARY :'#007074',
-    DANGER :'#F38C79',
-    CLAM :'#FFC1B4',
+    PRIMARY:'#FFF3E0',
+    SECONDARY :'#DDEB9D',
+    DANGER :'#A0C878',
+    CLAM :'#FAF6E9',
     GRAY:'#898989',
     WHITE:'#ffffff',
     BLACK :'#000000',
