@@ -23,7 +23,9 @@ export default function HomeScreen() {
 
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
-  const colors = ['#FFEBEE', '#E3F2FD', '#E8F5E9', '#FFF3E0', '#F3E5F5'];
+  const colors = ['#D9BDBD', '#AEC8E7', '#B4D1B1', '#E8C99D', '#C3A4D6'];
+
+
 
   // Fetch todos from API
   const fetchTodos = async () => {
@@ -80,17 +82,17 @@ export default function HomeScreen() {
       <StatusBar style="light" />
       <ImageBackground source={require('@/assets/images/fulldp.jpg')} style={styles.background}>
         <SafeAreaView style={styles.container}>
-          {/* Top Bar */}
+          
           <View style={styles.topBar}>
             <TouchableOpacity onPress={handleSignOut}>
-              <Icon name="menu" size={34} color="#000" />
+              <Icon name="chevron-left" size={34} color="#000" />
             </TouchableOpacity>
             <View style={styles.userImageWrapper}>
               <Image source={{ uri: user?.imageUrl }} style={styles.userImage} />
             </View>
           </View>
 
-          <Text style={styles.myList}>My ToDo List</Text>
+          <Text style={styles.myList}>My ToDo List 📃</Text>
 
           {/* Todo List */}
           <FlatList
@@ -169,7 +171,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 10,
+    marginBottom: 20,
   },
   todoContainer: {
     flexDirection: 'row',
@@ -187,14 +189,15 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   todoText: {
-    fontSize: 16,
+    fontSize: 18,
     color: '#333',
+    fontWeight:'bold',
     flexShrink: 1,
     flexWrap: 'wrap',
   },
   todoDate: {
-    fontSize: 12,
-    color: '#888',
+    fontSize: 14,
+    color: '#666',
     marginTop: 4,
   },
   addButton: {

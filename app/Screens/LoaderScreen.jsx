@@ -2,35 +2,35 @@ import { useRouter } from "expo-router";
 import LottieView from "lottie-react-native";
 import React, { useEffect, useRef } from 'react';
 import { Image, ImageBackground, StyleSheet, View } from 'react-native';
-import Colors from "./Utills/Colors";
+import Colors from "../../components/Utills/Colors";
 
 export default function LoaderScreen() {
    const animation = useRef(null);
-   const router = useRouter(null);
+   const router = useRouter();
 
   useEffect(() => {
     // Simulate a loading period before navigating to the LoginScreen
     setTimeout(() => {
-      router.replace("/Screens/LoginScreen/LoginScreen");
+      router.replace("LoginScreen");
     }, 3000); // Adjust the time as needed
   }, []);
   return (
     <View style={styles.animationContainer}>
       <ImageBackground 
         style={styles.bgImage}
-        source={require('../assets/images/bgImage.png')}
+        source={require('../../assets/images/fulldp.jpg')}
         blurRadius={5} // Apply blur effect
       >
         <View style={styles.centerContainer}>
           <Image
             style={styles.logo}
-            source={require('../assets/images/logo-white.png')}
+            source={require('../../assets/images/logo-black.png')}
           />
           <LottieView
             autoPlay
             ref={animation}
             style={styles.loader}
-            source={require('../assets/images/loader.json')}
+            source={require('../../assets/images/loader.json')}
           />
         </View>
       </ImageBackground>

@@ -5,12 +5,15 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Colors from '../../../components/Utills/Colors';
 import { useWarmUpBrowser } from '../../../hooks/WarmUpBrowser';
-import { router } from 'expo-router';
 
 WebBrowser.maybeCompleteAuthSession(); 
 
 export default function LoginScreen() {
+
+  //warm up browser for smoother oauth login
   useWarmUpBrowser();
+
+  //initiate google oauth login flow
   const { startOAuthFlow } = useOAuth({ strategy: 'oauth_google' , });
   const navigation = useNavigation();
 
@@ -20,6 +23,7 @@ export default function LoginScreen() {
 
       if (createdSessionId) {
         setActive({ session: createdSessionId });
+        //navigate to home screen after successful login
         navigation.reset({
            index: 0,
            routes: [{ name: 'HomeScreen/HomeScreen' }],
@@ -83,7 +87,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontFamily: 'Outfit-bold',
     textAlign: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   desc: {
     fontSize: 17,

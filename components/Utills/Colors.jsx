@@ -1,5 +1,5 @@
 export default{
-    PRIMARY:'#FFF3E0',
+    PRIMARY:'#D8AE55',
     SECONDARY :'#DDEB9D',
     DANGER :'#A0C878',
     CLAM :'#FAF6E9',
