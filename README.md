@@ -50,7 +50,6 @@ A sleek mobile TODO application built using **React Native (Expo)** with **Clerk
 - 🌄 Background images and branding
 - ⚠️ Validation & Toast notifications
 - ⏱️ Timestamps on tasks
-- 📡 API integration using Mock API (or your own)
 
 ## 📁 Folder Structure
 
@@ -75,7 +74,6 @@ Edit
 - **Clerk (OAuth + Auth Management)**
 - **React Navigation**
 - **Toast Notifications**
-- **MockAPI (for backend)**
 - **Tailored UI with ImageBackgrounds and custom colors**
 
 ## 🛠 Setup Instructions
@@ -83,7 +81,7 @@ Edit
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/yourusername/getitdone-todo-app.git
+   git clone https://github.com/KawminiAnuththara/TODO-APP.git
    cd getitdone-todo-app
 
 📚 Learn more

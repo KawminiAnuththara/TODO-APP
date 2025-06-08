@@ -33,7 +33,8 @@ export default function HomeScreen() {
       setLoading(true);
       const res = await fetch('https://60a21a08745cd70017576014.mockapi.io/api/v1/todo');
       const json = await res.json();
-      setTodos(json);
+       const sorted = json.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      setTodos(sorted);
     } catch (error) {
       console.error('Fetching todos failed', error);
     } finally {
