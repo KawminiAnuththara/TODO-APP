@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontSize: 18,
     borderColor: '#fff',
+    color:'#fff'
   },
   background: {
     flex: 1,

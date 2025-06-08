@@ -40,6 +40,52 @@ Edit
 npm run reset-project
 This command will move the starter code to the app-example directory and create a blank app directory where you can start fresh.
 
+A sleek mobile TODO application built using **React Native (Expo)** with **Clerk authentication**, allowing users to manage tasks efficiently with Google OAuth login.
+
+## 🚀 Features
+
+- 🔐 Google OAuth Authentication using Clerk
+- 📝 Add, View, Edit, and Delete TODO tasks
+- 📱 Clean and responsive UI
+- 🌄 Background images and branding
+- ⚠️ Validation & Toast notifications
+- ⏱️ Timestamps on tasks
+- 📡 API integration using Mock API (or your own)
+
+## 📁 Folder Structure
+
+├── assets/ # Images and media
+├── components/
+│ ├── services/ # API service functions (CRUD)
+│ ├── Utills/Colors.js # App-wide color constants
+├── hooks/ # Custom hooks (e.g., useWarmUpBrowser)
+├── screens/
+│ ├── HomeScreen/ # Home screen components
+│ ├── LoginScreen.js # Google OAuth login
+│ ├── AddTodoScreen.js # Add a new todo
+│ ├── TodoDetailScreen.js # Update/Delete a todo
+
+markdown
+Copy
+Edit
+
+## 🔧 Tech Stack
+
+- **React Native (Expo)**
+- **Clerk (OAuth + Auth Management)**
+- **React Navigation**
+- **Toast Notifications**
+- **MockAPI (for backend)**
+- **Tailored UI with ImageBackgrounds and custom colors**
+
+## 🛠 Setup Instructions
+
+1. **Clone this repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/getitdone-todo-app.git
+   cd getitdone-todo-app
+
 📚 Learn more
 Expo documentation
 

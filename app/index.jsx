@@ -35,7 +35,7 @@ export default function Index() {
   return (
     <ClerkProvider
       tokenCache={tokenCache}
-      publishableKey="pk_test_Z3VpZGluZy1tb2xseS0zMi5jbGVyay5hY2NvdW50cy5kZXYk"
+      publishableKey='pk_test_Z3VpZGluZy1tb2xseS0zMi5jbGVyay5hY2NvdW50cy5kZXYk'
     >
       <View onLayout={onLayoutRootView} style={styles.container}>
         <SignedIn>

@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontSize: 18,
     borderColor: "#fff",
+    color:'#fff',
   },
   todoButton: {
     borderRadius: 10,
